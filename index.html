@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Weak3ncrpt</title>
 </head>
+
 <body>
-  <div id="random-string"></div>
-
-  <script>
-    function generateRandomString(length) {
-  var result = '';
-  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
-
-  for (var i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
-  }
-
-  return result;
-}
-<div id="card">
-    setInterval(function() {
-      var randomString = generateRandomString(23);
-      document.getElementById('random-string').innerHTML = randomString;
-    }, 5000);
-  </script>
-</div>
+  <div class="card">
+    <div id="random-string"></div>
+    Code Generated:\n
+    <script>
+      function generateRandomString(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+      }
+      setInterval(function() {
+        var randomString = generateRandomString(23);
+        document.getElementById('random-string').innerHTML = randomString;
+      }, 5000);
+    </script>
+  </div>
 </body>
+
 </html>
