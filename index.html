@@ -4,7 +4,7 @@
   <title>Weak3ncrpt</title>
 </head>
 <body>
-  <div id="card"></div>
+  <div id="random-string"></div>
 
   <script>
     function generateRandomString(length) {
@@ -17,10 +17,12 @@
 
   return result;
 }
+<div id="card">
     setInterval(function() {
       var randomString = generateRandomString(23);
       document.getElementById('random-string').innerHTML = randomString;
     }, 5000);
   </script>
+</div>
 </body>
 </html>
