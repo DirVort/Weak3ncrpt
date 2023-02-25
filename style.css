@@ -1,3 +1,5 @@
+/*changed from https://codepen.io/gayane-gasparyan/pen/jOmaBQK*/
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
@@ -5,8 +7,8 @@
 }
 
 :root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
+  --card-height: 95%;
+  --card-width: 90%;
 }
 
 
@@ -36,7 +38,7 @@ body {
   font-size: 1.5em;
   color: rgb(88 199 250 / 0%);
   cursor: pointer;
-  font-family: cursive;
+  /*font-family: Source Code Pro; */
 }
 
 .card:hover {
@@ -45,7 +47,7 @@ body {
 }
 .card:hover:before, .card:hover:after {
   animation: none;
-  opacity: 0;
+  opacity: 100;
 }
 
 
