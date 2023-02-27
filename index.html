@@ -8,23 +8,25 @@
 
 <body>
   <div class="card">
-    Code Generated:<br>
+    Code Generated:<br><br>
+    <div></div>
     <div id="random-string"></div>
     <script>
       function generateRandomString(length) {
         var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+        // var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';!
+        var webCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%-*+';!
+        // ^ for website link
         for (var i = 0; i < length; i++) {
-          result += characters.charAt(Math.floor(Math.random() * characters.length));
+          result += webCharacters.charAt(Math.floor(Math.random() * webCharacters.length));
         }
         return result;
       }
       setInterval(function() {
-        var randomString = generateRandomString(23);
+        var randomString = generateRandomString(36);
         document.getElementById('random-string').innerHTML = randomString;
-      }, 5000);
+      }, 10000); // Generates every 10 secs
     </script>
   </div>
 </body>
-
 </html>
